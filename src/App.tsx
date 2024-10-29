@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { MessageSquare, Moon, Sun } from 'lucide-react';
+import { MessageSquare, Moon, Sun, } from 'lucide-react';
+import InsightsIcon from '@mui/icons-material/Insights';
 import Sidebar from './components/Sidebar.tsx';
 import ChatInterface from './components/ChatInterface.tsx';
 
@@ -34,8 +35,8 @@ function App() {
           <header className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 px-6 py-4 transition-colors duration-200">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <MessageSquare className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
-                <h1 className="text-xl font-semibold text-gray-900 dark:text-white">Guided Operations</h1>
+                <InsightsIcon fontSize="large" className="text-indigo-600 dark:text-indigo-400" />
+                <h1 className="text-3xl font-semibold text-gray-900 dark:text-white">Guided Operations</h1>
               </div>
               <button
                 onClick={() => setIsDarkMode(!isDarkMode)}

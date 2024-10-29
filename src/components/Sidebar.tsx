@@ -27,7 +27,7 @@ export default function Sidebar({ isOpen, onToggle, isDarkMode }: SidebarProps) 
           onClick={onToggle}
           className="w-full p-4 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
         >
-          <Menu className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+          <Menu className="w-6 h-6 text-gray-600 dark:text-gray-300 mt-2 ml-1" />
         </button>
       </div>
     );
