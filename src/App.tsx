@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { MessageSquare, Moon, Sun, } from 'lucide-react';
+import { MessageSquare, Moon, Sun } from 'lucide-react';
 import InsightsIcon from '@mui/icons-material/Insights';
+import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import Sidebar from './components/Sidebar.tsx';
 import ChatInterface from './components/ChatInterface.tsx';
 
@@ -36,7 +37,7 @@ function App() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <InsightsIcon fontSize="large" className="text-indigo-600 dark:text-indigo-400" />
-                <h1 className="text-3xl font-semibold text-gray-900 dark:text-white">Guided Operations</h1>
+                <h1 className="text-3xl font-bold font-Urbanist tracking-wide text-gray-700 dark:text-white">Guided Operations</h1>
               </div>
               <button
                 onClick={() => setIsDarkMode(!isDarkMode)}
@@ -44,14 +45,24 @@ function App() {
                 aria-label="Toggle dark mode"
               >
                 {isDarkMode ? (
-                  <Sun className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+                  <Sun className="w-6 h-6 text-gray-600 dark:text-gray-300" />
                 ) : (
-                  <Moon className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+                  <Moon className="w-6 h-6 text-gray-600 dark:text-gray-300" />
                 )}
               </button>
             </div>
           </header>
-
+          <Card className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700  transition-colors mt-4 ml-4 w-1/2">
+            {/* You can add content to your card here */}
+            <CardContent>
+              <Typography variant="h6" component="div" fontFamily={"Urbanist"} fontWeight={600} marginBottom={1}>
+                Welcome to Guided Operations !
+              </Typography>
+              <Typography variant="body2" color="text.secondary" font-family="Urbanist">
+              Speak the solution into existence. Elevate your workflow with guided operations where intelligent, real-time assistance transforms challenges into streamlined success.
+              </Typography>
+            </CardContent>
+          </Card>
           <ChatInterface
             messages={messages}
             loading={loading}
